@@ -8,7 +8,7 @@ exports.register = (req, res) => {
     db.query(q, [req.body.email], (err, data) => {
       if (err) return res.status(500).json(err);
       console.log(data)
-      if (data.length) return res.status(409).json("Toks vartotojas jau egzistuoja!");
+      if (data.length) return res.status(409).json("User existed!");
   
       const  hash = bcrypt.hashSync(req.body.password, 10);
   
@@ -22,7 +22,7 @@ exports.register = (req, res) => {
     });
   };
     
-  exports.login = (req, res) => {
+exports.login = (req, res) => {
   
     const q = "SELECT * FROM users WHERE email = ?";
   
@@ -38,20 +38,20 @@ exports.register = (req, res) => {
   
       if (!isPasswordCorrect)
         return res.status(400).json("Wrong email or password!");
-  
-      const token = jwt.sign({id:data[0].id}, "jwtkey");
-      const { password, ...other } = data[0];
+
+      const role = data[0].role === 'admin' ? 'admin' : 'user'
+   
+      const token = jwt.sign({id:data[0].id, role:role}, "jwtkey");
+      const { password } = data[0];
       console.log(password)
   
       res
-        .cookie("access_token", token, {
-          httpOnly: true,
-        })
-        .status(200)
-        .json(other);
+        .status(200).json({jwt:token})
     });
   };
 
 exports.logout = (req,res) => {
-  
+
 }
+
+

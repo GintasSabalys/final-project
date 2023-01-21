@@ -1,7 +1,6 @@
-import axios from 'axios';
-import React, { useState } from 'react';
-import {Link, useNavigate} from 'react-router-dom';
-
+import axios from "axios";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
     const [inputs, setInputs] = useState({
@@ -11,7 +10,7 @@ const Login = () => {
 
     const [err,setError] = useState(null)
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
   
     const handleChange = (e) => {
       setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -20,12 +19,15 @@ const Login = () => {
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
-        await axios.post("http://localhost:3005/server/auth/login", inputs);
+        const result = await axios.post("http://localhost:3005/server/auth/login", inputs);
+        localStorage.setItem('jwt', result.data.jwt)
+        console.log(result)
         navigate('/')
         console.log(err)
       } catch (err) {
         setError(err.response.data);
       }
+      
     };
 
 return (
