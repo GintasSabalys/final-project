@@ -18,3 +18,4 @@ app.use('/server/products', productsRoutes)
 app.listen(3005, () => {
     console.log('Connected - Server is running')
 })
+  
