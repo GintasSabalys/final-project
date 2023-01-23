@@ -47,8 +47,9 @@ exports.login = (req, res) => {
   
       res
         .status(200).json({jwt:token})
-    });
-  };
+        console.log(token)
+      }) 
+    };
 
 exports.logout = (req,res) => {
 

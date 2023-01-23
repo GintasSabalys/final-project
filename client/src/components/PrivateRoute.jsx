@@ -6,7 +6,6 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
   if (!token) {
     return <Navigate to='/login' />
   }
-
   return <Component {...rest} />
 }
 

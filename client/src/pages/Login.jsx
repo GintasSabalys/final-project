@@ -24,7 +24,6 @@ const Login = () => {
         localStorage.setItem('jwt', result.data.jwt);
         console.log(result)
         console.log(result.data.jwt)
-        console.log(result.data.role)
         navigate('/')
       } catch (err) {
         setError(err.response.data);
