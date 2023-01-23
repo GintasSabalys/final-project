@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import '../components/styleRegister.css'
 
 const Register = () => {
 
@@ -33,17 +34,21 @@ const Register = () => {
       };
 
       return (
+        <div className='bg'>
+          <div className='allForm'>
         <div className='Auth'>
-            <p>Register page</p>
-            <form>
+            <p className='titleRegister'>Register</p>
+            <form className='controlers'>
                 <input required type='text' placeholder='name' name='name' onChange={handleChange}/>
                 <input required type='text' placeholder='lastname' name='lastname' onChange={handleChange}/>
                 <input required type='password' placeholder='password' name='password' onChange={handleChange}/>
                 <input required type='email' placeholder='email' name='email' onChange={handleChange}/>
-                <button onClick={handleSubmit}>Register</button>
-                {err && <p>{err}</p>}
-                <span>Have account? <Link to='/Login'>Login</Link></span>
+                <button className='buttonRegister' onClick={handleSubmit}>Register</button>
+                {err && <p className='registerError'>{err}</p>}
+                <span className='battom'>Have account? <Link className='linktologin' to='/Login'>Login</Link></span>
             </form>
+        </div>
+        </div>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import {Link} from 'react-router-dom';
 
  function Admin() {
+
     return (
         <div>
             <p>Admin page</p>

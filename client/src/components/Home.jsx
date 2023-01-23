@@ -20,6 +20,9 @@ const vynils = [
 
   return (
 <div className="home">
+  <Link to="/Products">Products</Link>
+  <br/>
+  <Link to="/Login">Login</Link>
       <div className="vynils">
         {vynils.map((vynil) => (
           <div className="vynil" key={vynil.id}>
@@ -30,9 +33,6 @@ const vynils = [
               <Link className="link" to={`/vynil/${vynil.id}`}>
                 <h1>{vynil.title}</h1>
               </Link>
-              <Link to="/Products">Products</Link>
-              <br/>
-              <Link to="/Login">Login</Link>
               <p>{vynil.desc}</p>
               <button>Read More</button>
             </div>
