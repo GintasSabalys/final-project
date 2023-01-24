@@ -45,14 +45,16 @@ exports.login = (req, res) => {
       const { password } = data[0];
       console.log(password)
   
-      res
-        .status(200).json({jwt:token})
+      res.status(200).json({jwt:token})
         console.log(token)
       }) 
     };
-
-exports.logout = (req,res) => {
-
-}
+    
+    exports.logout = (req, res) => {
+      res.clearCookie({jwt:token},{
+        sameSite:"none",
+        secure:true
+      }).status(200).json("User has been logged out.")
+    };
 
 

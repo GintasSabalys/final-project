@@ -29,7 +29,7 @@ return (
                   <Route path="/Admin" element={<PrivateAdminRoute><Admin/></PrivateAdminRoute>}/>
                   <Route path="/Products" element={<AuthContexProvider><PrivateRoute><Products /></PrivateRoute></AuthContexProvider>}/>
                   <Route path="/AddProduct" element={<PrivateRoute component={AddProduct}/>}/>
-                  <Route path="/vynil/:id" element={<PrivateRoute component={VynilInfo}/>}/>
+                  <Route path="/Vynil/:id" element={<PrivateRoute component={VynilInfo}/>}/>
                   <Route path="*" element={<NoMatch/>}/>
                 </Routes>
         </UserContext.Provider>

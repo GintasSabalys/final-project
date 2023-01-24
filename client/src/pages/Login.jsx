@@ -12,6 +12,7 @@ const Login = () => {
     const [err,setError] = useState(null)
 
     const navigate = useNavigate();
+
   
     const handleChange = (e) => {
       setInputs((prev) => ({ ...prev, [e.target.name] : e.target.value }));
@@ -20,7 +21,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
-        const result = await axios.post("http://localhost:3005/server/auth/login", inputs);
+        const result = await axios.post("http://localhost:3005/server/auth/login", inputs)
         localStorage.setItem('jwt', result.data.jwt);
         console.log(result)
         console.log(result.data.jwt)
