@@ -20,7 +20,7 @@
 
 body {
   font-family: "Open Sans";
-  color: #fff;
+  background-color: #0000;
 }
 
 .Auth {
@@ -94,7 +94,7 @@ button.submitLogin {
 
 a.linktologin {
   text-decoration: none;
-  color: #fff;
+  color: #0000;
   opacity: .7;
   transition: opacity .3s ese;
 }

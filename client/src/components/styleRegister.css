@@ -20,7 +20,7 @@
 
   body {
     font-family: "Open Sans";
-    color: #fff;
+    color: #000;
   }
 
   .Auth {
@@ -93,7 +93,7 @@ button.submitregister:hover {
 
 a.linktologin {
     text-decoration: none;
-    color: #fff;
+    color: #000;
     opacity: .7;
     transition: opacity .3s ese;
 }

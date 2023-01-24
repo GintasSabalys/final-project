@@ -39,6 +39,11 @@ const vynils = [
           </div>
         ))}
       </div>
+      <div>
+          <Link className="link" to={`/admin`}>
+                <h1 className='color: red'>ADMIN</h1>
+          </Link>
+      </div>
     </div>
   );
 };

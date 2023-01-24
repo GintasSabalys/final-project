@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
 import { UserContext} from '../components/UserContext'
 import {Link} from 'react-router-dom';
-import PrivateRoute from './PrivateRoute';
 
 
-export default function Navbar() {
+const Navbar = () => {
     const msg = useContext(UserContext);
 
     return (
@@ -22,7 +21,6 @@ export default function Navbar() {
                         <Link className='link' to='/?cat=LEIDYBA'><h4>LEIDYBA</h4></Link>
                         <Link className='link' to='/?cat=APIEMUZIKĄ'><h4>APIE MUZIKĄ</h4></Link>
                         <Link className='link' to='/?cat=KONTAKTAI'><h4>KONTAKTAI</h4></Link>
-                        <span><PrivateRoute/></span>
                         <span>Logout</span>
                     </div>
                 </div>
@@ -31,3 +29,4 @@ export default function Navbar() {
     )
 }
 
+export default Navbar;
