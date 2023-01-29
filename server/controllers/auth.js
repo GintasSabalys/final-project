@@ -14,6 +14,8 @@ exports.register = (req, res) => {
   
       const  q = "INSERT INTO users(`name`, `lastname`, `email`,`password`) VALUES (?)";
       const values = [req.body.name, req.body.lastname, req.body.email, hash];
+    console.log(values)
+      
   
       db.query(q, [values], (err, data) => {
         if (err) return res.status(500).json(err);

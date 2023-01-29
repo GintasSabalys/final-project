@@ -11,7 +11,7 @@ exports.checkIfUser = (req, res, next) => {
     }
 
     try {
-        const decoded = jwt.verify(token, process.env.SECRET)
+        const decoded = jwt.verify(token)
         req.id = decoded.id
         next()
     } catch (error) {

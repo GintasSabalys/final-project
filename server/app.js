@@ -7,12 +7,14 @@ const cors = require('cors');
 const app = express()
 
 
-app.use(cors({credentials: true}));
+app.use(cors({credentials: true,}));
 app.use(express.json())
 app.use(cookieParser())
 app.use('/server/auth', authRoutes)
 app.use('/server/users', userRoutes)
 app.use('/server/products', productsRoutes)
+// app.use(express.json({limit: '25mb'}));
+// app.use(express.urlencoded({limit: '25mb'}));
 
 
 app.listen(3005, () => {

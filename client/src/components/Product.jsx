@@ -1,7 +1,7 @@
 import { useState } from "react";
 // import apiClient from "../clients/ApiClient";
 
-const Product = ({ title, price }) => {
+const Product = ({ title, price, category, format, status, recordcompany, releasedate, productImg }) => {
   const [productCount, setProductCount] = useState(0);
   
   const handleMinus = () => {
@@ -22,8 +22,15 @@ const Product = ({ title, price }) => {
     console.log(title)
 
   return (<>
-    <div style={{ paddingTop: '10px' }}>
-      <p>{title}</p> <p>{price}</p>
+    <div className="item" style={{ paddingTop: '10px' }}>
+      <p>{title}</p>
+      <p>{price}</p>
+      <p>{category}</p>
+      <p>{format}</p>
+      <p>{status}</p>
+      <p>{recordcompany}</p>
+      <p>{releasedate}</p>
+      <img src={productImg} alt="img"/>
     </div>
     <>
       <button onClick={handleMinus}>-</button><span>{productCount}</span><button onClick={handlePlus}>+</button>
