@@ -1,7 +1,7 @@
 import { useState } from "react";
 // import apiClient from "../clients/ApiClient";
 
-const Product = ({ title, price, category, format, status, recordcompany, releasedate, productImg }) => {
+const Product = ({ product, addToCard }) => {
   const [productCount, setProductCount] = useState(0);
   
   const handleMinus = () => {
@@ -15,25 +15,25 @@ const Product = ({ title, price, category, format, status, recordcompany, releas
     setProductCount(productCount + 1);
   }
 
-  // const addProductToCart = () => {
-    
-    // }
-    
-    console.log(title)
-
+  const handleAddToCart = () => {
+    addToCard(product.id, productCount);
+    setProductCount(0);
+  }
   return (<>
     <div className="item" style={{ paddingTop: '10px' }}>
-      <p>{title}</p>
-      <p>{price}</p>
-      <p>{category}</p>
-      <p>{format}</p>
-      <p>{status}</p>
-      <p>{recordcompany}</p>
-      <p>{releasedate}</p>
-      <img src={productImg} alt="img"/>
+      <p>{product.title}</p>
+      <p>{product.price}</p>
+      <p>{product.format}</p>
+      <p>{product.status}</p>
+      <p>{product.recordcompany}</p>
+      <p>{product.releasedate}</p>
+      <img style={{width: '100px', height: '100px'}} src={product.img} alt="img"/>
     </div>
     <>
-      <button onClick={handleMinus}>-</button><span>{productCount}</span><button onClick={handlePlus}>+</button>
+      <button style={{marginRight: '10px'}} onClick={handleMinus}>-</button>
+      <span>{productCount}</span>
+      <button style={{marginLeft: '10px'}} onClick={handlePlus}>+</button>
+      <button style={{marginLeft: '10px'}} onClick={handleAddToCart}>Add to cart</button>
       {/* <button onClick={addProductToCart}>Add product</button> */}
     </>
   </>)

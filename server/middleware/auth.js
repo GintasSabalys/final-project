@@ -11,12 +11,12 @@ exports.checkIfUser = (req, res, next) => {
     }
 
     try {
-        const decoded = jwt.verify(token)
+        const decoded = jwt.verify(token, "jwtkey")
         req.id = decoded.id
         next()
     } catch (error) {
         console.log(error)
-        res.status(500);
+        res.status(500).json(error);
     }
 }
 
@@ -29,12 +29,14 @@ exports.checkIfAdmin = (req, res, next) => {
     }
 
     try {
-        const decoded = jwt.verify(token, process.env.SECRET);
-        if (req.role !== 'admin') return res.status(403); // 403 - forbidden
-        req.id = decoded.id
-        next()
+        const decoded = jwt.verify(token, "jwtkey");
+        if (decoded.role !== 'admin') 
+            return res.status(403).end(); // 403 - forbidden
+        req.id = decoded.id;
+        next();
+
     } catch (error) {
         console.log(error)
-        res.status(500);
+        res.status(500).json(error);
     }
 }

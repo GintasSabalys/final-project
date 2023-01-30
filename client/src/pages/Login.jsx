@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import '../components/styleLogin.css'
+import '../components/Login/styleLogin.css'
 
 const Login = () => {
     const [inputs, setInputs] = useState({
@@ -23,8 +23,6 @@ const Login = () => {
       try {
         const result = await axios.post("http://localhost:3005/server/auth/login", inputs)
         localStorage.setItem('jwt', result.data.jwt);
-        console.log(result)
-        console.log(result.data.jwt)
         navigate('/')
       } catch (err) {
         setError(err.response.data);
