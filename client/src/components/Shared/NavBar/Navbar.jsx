@@ -9,39 +9,44 @@ const Navbar = () => {
     }
 
     return (
-        <div>
-            <div className='navbar'>
-                <div className='containerNav'>
-                    <nav className='linksNav'>
-                        <li>
-                            <Link className='link' to='/?cat=PAGRINDINIS'><h4>PAGRINDINIS</h4></Link>
+        <div className='body'>
+            <div className='header'>
+            <div className='logo'>Vyniloteka</div>
+                <div className='hamburger'>
+                    <div className='line'></div>
+                    <div className='line'></div>
+                    <div className='line'></div>
+                </div>
+                    <nav className='nav-bar'>
+                        <li className='nav-bar-link'>
+                            <Link className='link' to='/?cat=PAGRINDINIS'><h4 className='nav-title'>PAGRINDINIS</h4></Link>
                         </li>
-                        <li>
-                            <Link className='link' to='/products'><h4>PARDUOTUVĖ</h4></Link>
+                        <li className='nav-bar-link'>
+                            <Link className='link' to='/products'><h4 className='nav-title'>PARDUOTUVĖ</h4></Link>
                         </li>
-                        <li>
-                            <Link className='link' to='/cart'><h4>KREPŠELIS</h4></Link>
+                        <li className='nav-bar-link'>
+                            <Link className='link' to='/cart'><h4 className='nav-title'>KREPŠELIS</h4></Link>
                         </li>
-                        <li>
-                            <Link className='link' to='/?cat=PRE-ODER'><h4>PRE-ODER</h4></Link>
+                        <li className='nav-bar-link'>
+                            <Link className='link' to='/?cat=PASLAUGOS'><h4 className='nav-title'>PASLAUGOS</h4></Link>
                         </li>
-                        <li>
-                            <Link className='link' to='/?cat=PASLAUGOS'><h4>PASLAUGOS</h4></Link>
+                        <li className='nav-bar-link'>
+                            <Link className='link' to='/?cat=LEIDYBA'><h4 className='nav-title'>LEIDYBA</h4></Link>
                         </li>
-                        <li>
-                            <Link className='link' to='/?cat=LEIDYBA'><h4>LEIDYBA</h4></Link>
+                        <li className='nav-bar-link'>
+                            <Link className='link' to='/?cat=APIEMUZIKĄ'><h4 className='nav-title'>APIE MUZIKĄ</h4></Link>
                         </li>
-                        <li>
-                            <Link className='link' to='/?cat=APIEMUZIKĄ'><h4>APIE MUZIKĄ</h4></Link>
+                        <li className='nav-bar-link'>
+                            <Link className='link' to='/?cat=KONTAKTAI'><h4 className='nav-title'>KONTAKTAI</h4></Link>
                         </li>
-                        <li>
-                            <Link className='link' to='/?cat=KONTAKTAI'><h4>KONTAKTAI</h4></Link>
-                        </li>
-                        <li>
-                            <a className='link' onClick={() => logout()}><h4>ATSIJUNGTI</h4></a>
+                        <li className='nav-bar-link'>
+                            <a href='http://localhost:3000/login' className='link' onClick={() => logout()}><h4 className='nav-title'>ATSIJUNGTI</h4></a>
                         </li>
                     </nav>
-                </div>
+            </div>
+            <div className='text-vynil'>
+                <h1>Apie mus</h1>
+                <h2>Vinyloteka – Tavo naujas būdas pirkti muziką vinilo formate. Nesistengiame turėti daugiausia, nesiekiame sukelti į mūsų el. parduotuvę viską, ką turime sandėliuose.</h2>
             </div>
         </div>
     )

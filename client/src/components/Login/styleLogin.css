@@ -1,140 +1,110 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'PT Sans', sans-serif;
-  margin: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+  }
+  
+  .bgLogin {
+    background-image: url('https://images.unsplash.com/photo-1492560704044-e15259ca1c61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80');
+    height: 100vh;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    font-family: "Open Sans";
+    background-color: #0000;
+  }
+
+  form.controlersLogin {
+    background-color: transparent;
+}
+  
+  .AuthLogin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3));
+    width: 380px;
+    padding: 50px 30px;
+    border-radius: 10px;
+    box-shadow: 7px 7px 60px #000;
+  }
+  
+  p.titleLogin {
+    text-transform: uppercase;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 2em;
+    background-color: transparent;
+  }
+  
+  .inputRegister input[type="text"], input[type="password"], button {
+        width: 100%;
+        display: block;
+        padding: 10px;
+        color: #222;
+        border: none;
+        outline: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        color: #222;
+        border: none;
+        outline: none;
+        background: rgb(232, 247, 174);
+        font-size: .8.5em;
+        opacity: .7;
+        transform: opacity .3s ease;
+        opacity: 1;
+        margin-bottom: 25px;
+        border-radius: 15px;
+  }
+
+  button.login {
+    align-items: center;
 }
 
-.bg {
-  background-image: url('https://images.pexels.com/photos/96857/pexels-photo-96857.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-  height: 100vh;
-  background-repeat: no-repeat;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-
-body {
-  font-family: "Open Sans";
-  background-color: #0000;
-}
-
-.Auth {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3));
-  width: 380px;
-  padding: 50px 30px;
-  border-radius: 10px;
-  box-shadow: 7px 7px 60px #000;
-}
-
-p.titleLoginPage {
-  text-transform: uppercase;
-  font-size: 2em;
-  text-align: center;
-  margin-bottom: 2em;
-}
-
-
-
-.controlers input[type="text"], [type="password"], [type="email"] {
-  width: 100%;
-  display: block;
-  padding: 10px;
-  color: #222;
-  border: none;
-  outline: none;
-  margin: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-input.email {
-  width: 100%;
-  display: block;
-  padding: 10px;
-  color: #222;
-  border: none;
-  outline: none;
-  margin: 0em;
-}
-
-button.submitLogin {
-  width: 100%;
-  display: block;
-  padding: 10px;
-  color: #222;
-  border: none;
-  outline: none;
-  margin: 1em;
-  background: rgb(232, 247, 174);
-  text-transform: uppercase;
-  font-size: .8.5em;
-  opacity: .7;
-  transform: opacity .3s ease;
-}
-
-button.submitLogin {
-  opacity: 1;
-}
-
-.battom {
+  .alert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+  }
+  
+  a.linktologin {
+    text-decoration: none;
+    color: #000;
+    opacity: .7;
+    transition: opacity .3s ese;
+    background-color: transparent;
+  }
+  
+  a.linktologin:hover {
+    opacity: 1;
+    color: rgb(71, 183, 58);
+  }
+  
+  
+  p.loginError {
+  color: rgb(255, 0, 0);
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+  }
+  
 
-a.linktologin {
-  text-decoration: none;
-  color: #0000;
-  opacity: .7;
-  transition: opacity .3s ese;
-}
+  .buttom {
+    background-color: transparent;
+  }
 
-a.linktologin:hover {
-  opacity: 1;
-  color: rgb(232, 247, 174);
-}
-
-button.buttonRegister {
-width: 100%;
-display: block;
-padding: 10px;
-color: #222;
-border: none;
-outline: none;
-margin: 1em;
-}
-
-button.buttonRegister {
-background: rgb(232, 247, 174);
-text-transform: uppercase;
-font-size: .8.5em;
-opacity: .8;
-}
-
-button.buttonRegister:hover {
-opacity: 1;
-color: rgb(232, 247, 174);
-color: #222;
-
+  .inputRegister {
+    background-color: transparent;
 }
 
 p.loginError {
-color: rgb(255, 0, 0);
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-
-span.buttom {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    background-color: transparent;
 }

@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.cart-button-pay {
+    width: 50%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(95, 163, 165);
+    margin-left: 65px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.cart-button-pay:hover {
+    opacity: 1;
+    color: rgb(197, 26, 97);
+    cursor: pointer;
+  }
+
+  .cart-container-buttom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

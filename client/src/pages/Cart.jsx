@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useEffect } from "react"
 import apiClient from '../clients/ApiClient';
 import { CartItem } from "../components/Cart/CartItem";
+import '../pages/Cart.css'
 
 export const Cart = () => {
   const [myCart, setMyCart] = useState([]);
@@ -47,17 +48,19 @@ export const Cart = () => {
   }
 
   if (myCart.length === 0) {
-    return <h2>Your cart is empty</h2>
+    return <h2>Tavo krepšelis tuščias</h2>
   }
 
   return (
     <>{
         myCart.map((x) => (<CartItem item={x} removeItem={removeItem} />))
       }
-      <div style={{ paddingTop: '20px' }}>
-        Suma: {amountToPay} EU
+      <div className="cart-container-buttom">
+        <div className="price">
+        Suma: {amountToPay} &#8364;
+        </div>
         <div>
-          <button onClick={pay}>APMOKĖTI</button>
+          <button className="cart-button-pay" onClick={pay}>APMOKĖTI</button>
         </div>
       </div>
     </>

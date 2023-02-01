@@ -34,21 +34,31 @@ const Register = () => {
       };
 
       return (
-        <div className='bg'>
-          <div className='allForm'>
-        <div className='Auth'>
-            <p className='titleRegister'>Register</p>
-            <form className='controlers'>
-                <input required type='text' placeholder='name' name='name' onChange={handleChange}/>
-                <input required type='text' placeholder='lastname' name='lastname' onChange={handleChange}/>
-                <input required type='password' placeholder='password' name='password' onChange={handleChange}/>
-                <input required type='email' placeholder='email' name='email' onChange={handleChange}/>
-                <button className='buttonRegister' onClick={handleSubmit}>Register</button>
-                {err && <p className='registerError'>{err}</p>}
-                <span className='battom'>Have account? <Link className='linktologin' to='/Login'>Login</Link></span>
+        <div className='bgRegister'>
+          <div className='AuthRegister'>
+            <form className='controlersRegister'>
+              <p className='titleRegister'>Register</p>
+                <div  className='inputPlaceholder'>
+                    <input required type='text' placeholder='Name' name='name' onChange={handleChange}/>
+                 </div>
+                <div  className='inputPlaceholder'>
+                    <input required type='text' placeholder='Lastname' name='lastname' onChange={handleChange}/>
+                </div>
+                <div  className='inputPlaceholder'>
+                    <input required type='password' placeholder='Password' name='password' onChange={handleChange}/>
+                </div>
+                <div className='inputPlaceholder'>
+                    <input required type='email' placeholder='Email' name='email' onChange={handleChange}/>
+                </div>
+                <div className='inputPlaceholder'>
+                    <button className='Register' onClick={handleSubmit}>REGISTER</button>
+                </div>
+                    {err && <p className='registerError'>{err}</p>}
+                <div className="alert">
+                    <span className="alert">Have account? <Link className='linktoRegister' to='/Login'>Login</Link></span>
+                </div>
             </form>
-        </div>
-        </div>
+          </div>
         </div>
     )
 }

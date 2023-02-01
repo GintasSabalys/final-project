@@ -3,8 +3,8 @@ import {Link} from 'react-router-dom';
  function Admin() {
 
     return (
-        <div>
-            <p>Admin page</p>
+        <div className='Main'>
+            <p>Main</p>
             <Link to="/AddProduct">Add product</Link>
             <br/>
             <Link to="/Products">Products</Link>

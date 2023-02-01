@@ -1,5 +1,4 @@
 
-import '../components/Admin/Admin.css'
 import React from 'react';
 import { AddCategory } from '../components/Admin/AddCategory';
 import { AddProduct } from '../components/Admin/AddProduct';

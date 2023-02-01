@@ -3,27 +3,25 @@
     margin: 0;
     padding: 0;
     font-family: 'PT Sans', sans-serif;
+    margin: 0;
   }
-
-  .bg {
-    background-image: url('https://images.pexels.com/photos/96857/pexels-photo-96857.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  
+  .bgRegister {
+    background-image: url('https://images.unsplash.com/photo-1492560704044-e15259ca1c61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80');
     height: 100vh;
     background-repeat: no-repeat;
     width: 100%;
     background-size: cover;
     background-position: center;
-  }
-
-  * {
-    margin: 0;
-  }
-
-  body {
     font-family: "Open Sans";
-    color: #000;
+    background-color: #0000;
   }
 
-  .Auth {
+  form.controlersRegister {
+    background-color: transparent;
+}
+  
+  .AuthRegister {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -34,103 +32,85 @@
     border-radius: 10px;
     box-shadow: 7px 7px 60px #000;
   }
-
- .titleRegister {
+  
+  p.titleRegister {
     text-transform: uppercase;
     font-size: 2em;
     text-align: center;
     margin-bottom: 2em;
+    background-color: transparent;
+  }
+  
+  .inputPlaceholder input[type="text"], input[type="password"], input[type="email"], button {
+        width: 100%;
+        display: block;
+        padding: 10px;
+        color: #222;
+        border: none;
+        outline: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        color: #222;
+        border: none;
+        outline: none;
+        background: rgb(232, 247, 174);
+        font-size: .8.5em;
+        opacity: .7;
+        transform: opacity .3s ease;
+        opacity: 1;
+        margin-bottom: 25px;
+        border-radius: 15px;
   }
 
 
-  .controlers input[type="text"], [type="password"], [type="email"] {
-    width: 100%;
-    /* display: block; */
-    padding: 10px;
-    color: #222;
-    border: none;
-    outline: none;
-    margin: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-input.email {
-    width: 100%;
-    display: block;
-    padding: 10px;
-    color: #222;
-    border: none;
-    outline: none;
-    margin: 0em;
-}
-
-button.submitregister {
-    width: 100%;
-    display: block;
-    padding: 10px;
-    color: #222;
-    border: none;
-    outline: none;
-    margin: 1em;
-    background: rgb(232, 247, 174);
-    text-transform: uppercase;
-    font-size: .8.5em;
-    opacity: .7;
-    transform: opacity .3s ease;
-}
-
-button.submitregister:hover {
-    opacity: 1;
-}
-
-.battom {
-    display: flex;
-    flex-direction: column;
+  button.Register {
     align-items: center;
 }
 
-a.linktologin {
+  .alert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+  }
+  
+  a.linktoRegister {
     text-decoration: none;
     color: #000;
     opacity: .7;
     transition: opacity .3s ese;
-}
-
-a.linktologin:hover {
+    background-color: transparent;
+  }
+  
+  a.linktoRegister:hover {
     opacity: 1;
-    color: rgb(232, 247, 174);
-}
-
-button.buttonRegister {
-  width: 100%;
-  display: block;
-  padding: 10px;
-  color: #222;
-  border: none;
-  outline: none;
-  margin: 1em;
-}
-
-button.buttonRegister {
-  background: rgb(232, 247, 174);
-  text-transform: uppercase;
-  font-size: .8.5em;
-  opacity: .8;
-}
-
-button.buttonRegister:hover {
-  opacity: 1;
-  color: rgb(232, 247, 174);
-  color: #222;
-
-}
-
-p.registerError {
+    color: rgb(71, 183, 58);
+  }
+  
+  
+  
+  p.registerError {
   color: rgb(255, 0, 0);
   display: flex;
   flex-direction: column;
   align-items: center;
+  }
+  
+
+  .buttom {
+    background-color: transparent;
+  }
+
+  .inputRegister {
+    background-color: transparent;
 }
 
+p.registerError {
+    background-color: transparent;
+}
+
+.inputPlaceholder {
+    background-color: transparent;
+}

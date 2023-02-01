@@ -1,14 +1,15 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
+import './Admin/Main.css'
 
 const Home = () => {
   return (
 <div className="home">
-  <Link to="/Products">Products</Link>
+  <Link className='products' to="/Products">Products</Link>
   <br/>
-      <div>
+      <div className='adminLink'>
           <Link className="link" to={`/admin`}>
-                <h1 className='color: red'>ADMIN</h1>
+                <h1 className='admin'>ADMIN</h1>
           </Link>
       </div>
     </div>

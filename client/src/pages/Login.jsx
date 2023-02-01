@@ -31,15 +31,25 @@ const Login = () => {
     };
 
 return (
-  <div className="bg">
-    <div className='Auth'>
-        <p className="titleLoginPage">Login</p>
-        <form className="controlers">
-            <input required type='text' placeholder='email' name='email' onChange={handleChange}/>
-            <input required type='password' placeholder='password' name='password' onChange={handleChange}/>
-            <button className="submitLogin" onClick={handleSubmit}>Login</button>
+  <div className="bgLogin">
+    <div className='AuthLogin'>
+        <form className="controlersLogin">
+          <p className="titleLogin">Login</p>
+          <div className="inputRegister">
+            <input required type='text' placeholder='Email' name='email' onChange={handleChange}/>
+          </div>
+          <div className="inputRegister">
+            <input required type='password' placeholder='Password' name='password' onChange={handleChange}/>
+          </div>
+          <div className="inputRegister">
+            <button onClick={handleSubmit} className="login">LOGIN</button>
+          </div>
             {err && <p className="loginError">{err}</p>}
-            <span className="buttom">Don't have an account? <Link className="linktologin" to='/register'>register</Link></span>
+          <div className="buttom">
+            <div className="alert">
+            <span className="alert">Don't have an account? <Link className="linktologin" to='/register'>Register</Link></span>
+            </div>
+          </div>
         </form>
     </div>
     </div>

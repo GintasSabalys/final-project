@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import apiClient from '../clients/ApiClient';
 import Product from '../components/Product';
+import '../pages/Products.css'
 
 const Products = () => {
     const [products, setProducts] = useState([]);
@@ -40,18 +41,25 @@ const Products = () => {
     }
 
     return (
-        <>
-            <Link to="/">Go to home page</Link>
-            {categories &&
-                <select onChange={handleSelectChange} style={{ width: '100%' }}>
-                    {categories.map(x => <option value={x.id}>{x.name}</option>)}
-                </select>}
-            {products.length === 0 && <h1>Unfortunatly there is no products :/</h1>}
-            {products.length > 0 && products.map((data) =>
-                <Product product={data} addToCard={addToCart} />
-            )}
-            {showError && <div style={{backgroundColor: 'red'}}>Whoops.. Something went wrong :/</div>}
-        </>
+    <>
+        <div className='main-back'>
+            <div>
+                <Link className='titleProducts' to="/">Atgal į pagrindinį puslapį</Link>
+            </div>
+                <div className='cardsProducts'>
+                    <div className='sellect'>
+                        {categories && <select className='sellect-product' onChange={handleSelectChange}>
+                        {categories.map(x => <option value={x.id}>{x.name}</option>)}</select>}
+                        {products.length === 0 && <h1>Atsiprašome, prekių šia kategorija neturime :/</h1>}
+                    </div>
+                    <div>
+                        {products.length > 0 && products.map((data) =>
+                        <Product product={data} addToCard={addToCart} />)}
+                        {showError && <div style={{backgroundColor: 'red'}}>Whoops.. kažkas nepavyko :/</div>}
+                    </div>
+                </div>
+        </div>
+    </>
     )
 }
 export default Products
