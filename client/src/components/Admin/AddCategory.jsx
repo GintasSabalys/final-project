@@ -24,7 +24,6 @@ export const AddCategory = () => {
     <>
       <p className="titleLoginPage">Add category</p>
       <input type='text' placeholder='Name' name='category' onChange={handleCategoryName} />
-        {/* <input type='file' className='file' name='image' onChange={handleFileInputChange} value={fileInputState} /> */}
         <button className="submitLogin" type='submit' onClick={addNewCategory}>Add</button>
         {showCategoryAdded && <div style={{backgroundColor: 'green'}}>Category was added successfully</div>}
         <div className='linktoproducts'>
