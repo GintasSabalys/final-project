@@ -87,7 +87,7 @@ background-image: url('https://images.unsplash.com/photo-1622227875321-4dee2574a
     align-items: center;
     flex-direction: column;
     text-align: justify;
-    padding: 300px;
+    padding:50px;
     color: rgb(49, 151, 24);
 }
 
