@@ -1,6 +1,7 @@
 import { useState } from "react"
 import apiClient from '../../clients/ApiClient';
 import { Link } from "react-router-dom";
+import '../Admin/AddCategory';
 
 const fieldName = 'name';
 
@@ -21,14 +22,18 @@ export const AddCategory = () => {
   }
   
   return (
-    <>
-      <p className="titleLoginPage">Add category</p>
-      <input type='text' placeholder='Name' name='category' onChange={handleCategoryName} />
-        <button className="submitLogin" type='submit' onClick={addNewCategory}>Add</button>
-        {showCategoryAdded && <div style={{backgroundColor: 'green'}}>Category was added successfully</div>}
+    <div>
+        <p className="title-category">Pridėti kategoriją</p>
+      <div className="controler-category">
+      <input className="controler-category" type='text' placeholder='Kategorija' name='category' onChange={handleCategoryName} />
+      </div>
+      <div>
+        <button className="add-category" type='submit' onClick={addNewCategory}>PRIDĖTI</button>
+      </div>
+        {showCategoryAdded && <div style={{backgroundColor: 'green'}}>Kategorija pridėta sėkmingai</div>}
         <div className='linktoproducts'>
-          <Link to="/Products">Products</Link>
+          <Link to="/Products">Produktai</Link>
         </div>
-    </>
+    </div>
   )
 }

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import apiClient from '../../clients/ApiClient';
+import '../Admin/AddProduct.css'
 
 export const AddProduct = () => {
   const [product, setProduct] = useState(undefined);
@@ -15,7 +16,7 @@ export const AddProduct = () => {
         setProduct({ ...product, categoryId: result.data[0].id})
       }
     });
-  }, [])
+  }, [product])
 
   const handleFieldChanges = (e, fieldName) => {
     setProduct({ ...product, [fieldName]: e.target.value });
@@ -40,24 +41,39 @@ export const AddProduct = () => {
   }
 
   return (
-    <>
-      <p className="titleLoginPage">Add product</p>
-        <div >
-        <select onChange={(e) => handleFieldChanges(e, 'categoryId')} style={{width: '100%'}}>
-          {categories.map(x => <option value={x.id}>{x.name}</option>)}
-        </select>
+    <div className="bd-add-product">
+      <p className="title-add-product">Add product</p>
+      <div className="controler-add-product">
+        <div className="input-add-product">
+          <select className="select-stile" onChange={(e) => handleFieldChanges(e, 'categoryId')}>
+            {categories.map(x => <option value={x.id}>{x.name}</option>)}
+          </select>
         </div>
-        <input type='text' placeholder='Price' name='Price' onChange={(e) => handleFieldChanges(e, 'price')} />
-        <input type='text' placeholder='Title' name='Title' onChange={(e) => handleFieldChanges(e, 'title')} />
-        <input type='text' placeholder='Format' name='Format' onChange={(e) => handleFieldChanges(e, 'format')} />
-        <input type='text' placeholder='Status' name='Status' onChange={(e) => handleFieldChanges(e, 'status')} />
-        <input type='text' placeholder='Record Company' name='Record Company' onChange={(e) => handleFieldChanges(e, 'recordCompany')} />
-        <input type='text' placeholder='Release date' name='Release date' onChange={(e) => handleFieldChanges(e, 'releaseDate')} />
-        <input type="file" onChange={handleFileChanges} accept="image/jpeg, image/png, image/jpg" />
-        {previewSource && (<img src={previewSource} alt="img" style={{ height: '100px', width: '100px' }} /> )}
-        <button className="submitLogin" type='submit' onClick={() => AddNewProduct()}>Add</button>
-
-      {showProductAdded && <div style={{backgroundColor: 'green'}}>Product was added successfully</div>}
-    </>
+        <div className="input-add-select">
+          <input type='text' placeholder='Kaina' name='Price' onChange={(e) => handleFieldChanges(e, 'price')} />
+        </div>
+        <div className="input-add-select">
+          <input type='text' placeholder='Grupė' name='Title' onChange={(e) => handleFieldChanges(e, 'title')} />
+        </div>
+        <div className="input-add-select">
+          <input type='text' placeholder='Formatas' name='Format' onChange={(e) => handleFieldChanges(e, 'format')} />
+        </div>
+        <div className="input-add-select">
+          <input type='text' placeholder='Statusas' name='Status' onChange={(e) => handleFieldChanges(e, 'status')} />
+        </div>
+        <div className="input-add-select">
+          <input type='text' placeholder='Įrašų kompanija' name='Record Company' onChange={(e) => handleFieldChanges(e, 'recordCompany')} />
+        </div>
+        <div className="input-add-select">
+          <input type='text' placeholder='Išleidimo data' name='Release date' onChange={(e) => handleFieldChanges(e, 'releaseDate')} />
+        </div>
+        <div className="input-add-select">
+          <input type="file" onChange={handleFileChanges} accept="image/jpeg, image/png, image/jpg" />
+        </div>
+            {previewSource && (<img className="add-img-store" src={previewSource} alt="img"/> )}
+        <button className="input-add-select" type='submit' onClick={() => AddNewProduct()}><h3 className="add">PRIDĖTI</h3></button>
+            {showProductAdded && <div style={{backgroundColor: 'green'}}>Produktas sėkmingai pridėtas!</div>}
+      </div>
+    </div>
   );
 }
