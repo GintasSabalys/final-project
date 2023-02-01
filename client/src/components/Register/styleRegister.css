@@ -39,6 +39,7 @@
     text-align: center;
     margin-bottom: 2em;
     background-color: transparent;
+    color: rgb(236, 230, 230);
   }
   
   .inputPlaceholder input[type="text"], input[type="password"], input[type="email"], button {
@@ -78,7 +79,7 @@
   
   a.linktoRegister {
     text-decoration: none;
-    color: #000;
+    color: rgb(236, 230, 230);
     opacity: .7;
     transition: opacity .3s ese;
     background-color: transparent;
