@@ -9,14 +9,14 @@ export const AddProduct = () => {
   const [showProductAdded, setShowProductAdded] = useState(false);
   const [previewSource, setPreviewSource] = useState('');
 
-  useEffect(() => {
+  useEffect (() => {
     apiClient.get('/server/categories').then((result) => {
       setCategories(result.data);
       if (result.data[0]) {
         setProduct({ ...product, categoryId: result.data[0].id})
       }
     });
-  }, [product])
+  }, [])
 
   const handleFieldChanges = (e, fieldName) => {
     setProduct({ ...product, [fieldName]: e.target.value });
