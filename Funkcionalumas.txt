@@ -1,0 +1,17 @@
+Puslapis apsaugotas autentifikacija, todėl į admin puslapius gali užeiti tik admin privilegijas turintis vartotojas.
+
+admin useris: gintas.sabalys@gmail.com
+pass:         gintas
+
+Visi produktai pasiekiami tiek adminui tiek useriams. Pagrindiniame puslapyje PRODUCTS raudonomis raidėmis pažymėtoje nuorodoje bus visi produktai. 
+
+Produktus galima išsifiltruoti pagal žanrą --> pop , ragge, vocal. Išsirinkus patikusį žanrą galima pasirinkti kiek vienetų norite
+ir įsidėti į krepšelį. Paspaudus meniu juostoje viršuje krepšelis , jus nukreips į jūsų krepšelį. Ten galėsite nepatikusius produktus 
+ištrinti arba apmokėti. Bendra suma rašoma apačioje prie mygtuko apmokėti. Apmokėjus krepšelis lieka tuščias ir išoka pranešimas kad 
+krepšelis apmokėtas.
+
+Admin puslapyje kurį galima pasiekti pagrindinio puslapio centre paspaudus ADMIN jus nukreips į produktų pridėjimą, šio puslapio nebus
+galima pasiekti jeigu jūs nebūsite prisijunge su administratoriaus teisėmis, todėl kitu atveju jus nukreips į login puslapį. Šiame puslapyje 
+galite pridėti produktus pradžioje pasirinkę žanrą į kurį norite pridėti. Jeigu žanras yra naujas jį galite pridėti puslapio apačioje 
+esančioje skiltyje. Kai pridėsite žanrą reikia perkrauti puslapį, kad žanras atsirastų prie pasirinkimų, tada jau galite pildyti 
+visą informaciją, pasirinkti paveikslėlį ir pridėti produktą.
