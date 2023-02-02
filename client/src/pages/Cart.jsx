@@ -52,7 +52,8 @@ export const Cart = () => {
   }
 
   return (
-    <>{
+    <div className="cart-item-bg">
+      {
         myCart.map((x) => (<CartItem item={x} removeItem={removeItem} />))
       }
       <div className="cart-container-buttom">
@@ -63,6 +64,6 @@ export const Cart = () => {
           <button className="cart-button-pay" onClick={pay}>APMOKĖTI</button>
         </div>
       </div>
-    </>
+      </div>
   )
 }

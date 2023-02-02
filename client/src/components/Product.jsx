@@ -20,16 +20,16 @@ const Product = ({ product, addToCard }) => {
     setProductCount(0);
   }
   return (
-    <>
+<div className="all-products">
   <div className="container-product">
     <div className="itemProduct">
       <div className="infoProduct">
       <p className="titeProduct">{product.title}</p>
-      <p>{product.price}</p>
-      <p>{product.format}</p>
-      <p>{product.status}</p>
-      <p>{product.recordcompany}</p>
-      <p>{product.releasedate}</p>
+      <p>Kaina: {product.price} &#8364;</p>
+      <p>Formatas: {product.format}</p>
+      <p>Statusas: {product.status}</p>
+      <p>Įrašų kompanija: {product.recordcompany}</p>
+      <p>Išleidimo data: {product.releasedate}</p>
       </div>
       <div className="img">
       <img className="image-product" src={product.img} alt="img"/>
@@ -42,7 +42,8 @@ const Product = ({ product, addToCard }) => {
       </div>
     </div>
   </div>
-  </>)
+</div>
+)
 }
 
 export default Product;

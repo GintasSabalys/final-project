@@ -19,9 +19,21 @@
 
 .container-product {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 70vh;
+}
+
+.cards-products {
+    display: flex;
+    row-gap: 20px;
+    flex-direction: row;
+    gap: 100px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding-left: 200px;
+    padding-right: 10px;
 }
 
 .image-product {
@@ -46,8 +58,10 @@
 }
 
 .infoProduct {
-    text-align: center;
+    text-align: left;
     color: #444;
+    margin-left: 10px;
+    margin-top: 5px;
 }
 
 p.titeProduct {

@@ -1,7 +1,7 @@
 import { useState } from "react"
 import apiClient from '../../clients/ApiClient';
 import { Link } from "react-router-dom";
-import '../Admin/AddCategory';
+import '../Admin/AddCategory.css';
 
 const fieldName = 'name';
 
@@ -22,18 +22,18 @@ export const AddCategory = () => {
   }
   
   return (
-    <div>
+    <div className="add-category-bg">
         <p className="title-category">Pridėti kategoriją</p>
       <div className="controler-category">
       <input className="controler-category" type='text' placeholder='Kategorija' name='category' onChange={handleCategoryName} />
       </div>
-      <div>
-        <button className="add-category" type='submit' onClick={addNewCategory}>PRIDĖTI</button>
+      <div className="button-add">
+        <button className="add-category" type='submit' onClick={addNewCategory}><p className="add-text">PRIDĖTI</p></button>
       </div>
         {showCategoryAdded && <div style={{backgroundColor: 'green'}}>Kategorija pridėta sėkmingai</div>}
-        <div className='linktoproducts'>
-          <Link to="/Products">Produktai</Link>
-        </div>
+      <div className='linktoproducts'>
+          <Link className="link-products" to="/Products">Produktai</Link>
+      </div>
     </div>
   )
 }

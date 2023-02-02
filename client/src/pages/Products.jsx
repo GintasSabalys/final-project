@@ -52,7 +52,7 @@ const Products = () => {
                         {categories.map(x => <option value={x.id}>{x.name}</option>)}</select>}
                         {products.length === 0 && <h1>Atsiprašome, prekių šia kategorija neturime :/</h1>}
                     </div>
-                    <div>
+                    <div className='cards-products'>
                         {products.length > 0 && products.map((data) =>
                         <Product product={data} addToCard={addToCart} />)}
                         {showError && <div style={{backgroundColor: 'red'}}>Whoops.. kažkas nepavyko :/</div>}
